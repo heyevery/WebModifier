@@ -1,0 +1,22 @@
+{
+  "name": "即将上线",
+  "version": "1.0.0",
+  "title": "即将上线 Coming Soon",
+  "description": "产品上线前的预告页：品牌标语、上线倒计时与邮箱订阅入口，提前积累潜在用户。",
+  "category": "工具",
+  "emoji": "🚀",
+  "tags": ["上线预告", "订阅", "落地页"],
+  "editable": {
+    "brand": { "type": "text", "label": "品牌名称" },
+    "kicker": { "type": "text", "label": "顶部标签" },
+    "title": { "type": "text", "label": "主标题" },
+    "desc": { "type": "text", "label": "描述" },
+    "days": { "type": "text", "label": "倒计时-天数" },
+    "hours": { "type": "text", "label": "倒计时-小时" },
+    "minutes": { "type": "text", "label": "倒计时-分钟" },
+    "seconds": { "type": "text", "label": "倒计时-秒数" },
+    "subscribe-note": { "type": "text", "label": "订阅说明" },
+    "subscribe-link": { "type": "link", "label": "订阅按钮链接" },
+    "footer-copy": { "type": "text", "label": "页脚版权" }
+  }
+}

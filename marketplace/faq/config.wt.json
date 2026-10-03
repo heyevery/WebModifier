@@ -1,0 +1,30 @@
+{
+  "name": "常见问题",
+  "version": "1.0.0",
+  "title": "常见问题 FAQ",
+  "description": "清晰实用的帮助中心页面：分类标题 + 可展开的问答列表，底部提供人工支持入口。",
+  "category": "工具",
+  "emoji": "❓",
+  "tags": ["FAQ", "帮助", "客服"],
+  "editable": {
+    "nav-brand": { "type": "text", "label": "品牌名称" },
+    "page-title": { "type": "text", "label": "页面标题" },
+    "page-subtitle": { "type": "text", "label": "页面副标题" },
+    "q1": { "type": "text", "label": "问题1" },
+    "a1": { "type": "text", "label": "回答1" },
+    "q2": { "type": "text", "label": "问题2" },
+    "a2": { "type": "text", "label": "回答2" },
+    "q3": { "type": "text", "label": "问题3" },
+    "a3": { "type": "text", "label": "回答3" },
+    "q4": { "type": "text", "label": "问题4" },
+    "a4": { "type": "text", "label": "回答4" },
+    "q5": { "type": "text", "label": "问题5" },
+    "a5": { "type": "text", "label": "回答5" },
+    "q6": { "type": "text", "label": "问题6" },
+    "a6": { "type": "text", "label": "回答6" },
+    "support-title": { "type": "text", "label": "支持区标题" },
+    "support-desc": { "type": "text", "label": "支持区描述" },
+    "support-link": { "type": "link", "label": "联系支持按钮" },
+    "footer-copy": { "type": "text", "label": "页脚版权" }
+  }
+}

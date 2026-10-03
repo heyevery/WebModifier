@@ -1,0 +1,25 @@
+{
+  "name": "博客文章页",
+  "version": "1.0.0",
+  "title": "博客文章页",
+  "description": "适合长文写作的阅读型博客模板：封面、金句、作者卡片一应俱全。",
+  "category": "生活",
+  "emoji": "📝",
+  "tags": ["博客", "阅读", "内容创作"],
+  "editable": {
+    "nav-brand": { "type": "text", "label": "博客名称" },
+    "post-title": { "type": "text", "label": "文章标题" },
+    "post-meta": { "type": "text", "label": "发布信息" },
+    "post-cover": { "type": "image", "label": "文章封面图" },
+    "section1-title": { "type": "text", "label": "小节1标题" },
+    "section1-p1": { "type": "text", "label": "小节1段落1" },
+    "section1-p2": { "type": "text", "label": "小节1段落2" },
+    "post-quote": { "type": "text", "label": "金句引用" },
+    "section2-title": { "type": "text", "label": "小节2标题" },
+    "section2-p1": { "type": "text", "label": "小节2段落1" },
+    "section2-p2": { "type": "text", "label": "小节2段落2" },
+    "author-name": { "type": "text", "label": "作者名" },
+    "author-bio": { "type": "text", "label": "作者简介" },
+    "back-link": { "type": "link", "label": "返回链接" }
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>山间小馆</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 首屏 -->
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="hero-badge">🥢 城市里的山野味道</span>
+        <!-- @wt:edit name="hero-title" type="text" label="主标题" -->
+        <h1>山间小馆</h1>
+        <!-- /@wt:edit -->
+        <!-- @wt:edit name="hero-subtitle" type="text" label="副标题" -->
+        <p class="hero-sub">
+          当季山野食材，每日现采现做。用一顿饭的时间，把自己还给生活。
+        </p>
+        <!-- /@wt:edit -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" data-wt-edit="reserve-link" data-wt-type="link" data-wt-label="预订按钮">立即预订桌位</a>
+          <a class="btn btn-ghost" href="#menu">查看菜单</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section class="section about">
+      <div class="container about-grid">
+        <img
+          src="https://picsum.photos/seed/restaurant-about/640/480"
+          alt="店内环境"
+          class="about-img"
+          data-wt-edit="about-image"
+          data-wt-type="image"
+          data-wt-label="店内环境图"
+        />
+        <div>
+          <span class="section-kicker">ABOUT US</span>
+          <!-- @wt:edit name="about-title" type="text" label="关于标题" -->
+          <h2>慢下来，好好吃饭</h2>
+          <!-- /@wt:edit -->
+          <!-- @wt:edit name="about-text" type="text" label="关于描述" -->
+          <p class="section-text">
+            山间小馆创立于 2019 年，主厨坚持每周两次进山采买。没有中央厨房，没有预制料理包，只有当季的食材、克制的调味，以及一盏为你留到打烊的灯。
+          </p>
+          <!-- /@wt:edit -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 招牌菜单 -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <span class="section-kicker">SIGNATURE</span>
+        <!-- @wt:edit name="menu-title" type="text" label="菜单标题" -->
+        <h2 class="center">招牌推荐</h2>
+        <!-- /@wt:edit -->
+        <div class="menu-grid">
+          <article class="dish">
+            <img src="https://picsum.photos/seed/dish1/480/320" alt="招牌菜1" />
+            <div class="dish-body">
+              <div class="dish-head">
+                <!-- @wt:edit name="dish1-name" type="text" label="菜品1名称" -->
+                <h3>松茸土鸡汤</h3>
+                <!-- /@wt:edit -->
+                <!-- @wt:edit name="dish1-price" type="text" label="菜品1价格" -->
+                <span class="price">¥ 88</span>
+                <!-- /@wt:edit -->
+              </div>
+              <!-- @wt:edit name="dish1-desc" type="text" label="菜品1描述" -->
+              <p>高山散养土鸡配新鲜松茸，文火慢炖四小时，汤色清亮、回甘悠长。</p>
+              <!-- /@wt:edit -->
+            </div>
+          </article>
+          <article class="dish">
+            <img src="https://picsum.photos/seed/dish2/480/320" alt="招牌菜2" />
+            <div class="dish-body">
+              <div class="dish-head">
+                <!-- @wt:edit name="dish2-name" type="text" label="菜品2名称" -->
+                <h3>笋干烧肉</h3>
+                <!-- /@wt:edit -->
+                <!-- @wt:edit name="dish2-price" type="text" label="菜品2价格" -->
+                <span class="price">¥ 58</span>
+                <!-- /@wt:edit -->
+              </div>
+              <!-- @wt:edit name="dish2-desc" type="text" label="菜品2描述" -->
+              <p>冬笋尖日晒成干，与五花肉同烧，油润不腻，是记忆里的家常味道。</p>
+              <!-- /@wt:edit -->
+            </div>
+          </article>
+          <article class="dish">
+            <img src="https://picsum.photos/seed/dish3/480/320" alt="招牌菜3" />
+            <div class="dish-body">
+              <div class="dish-head">
+                <!-- @wt:edit name="dish3-name" type="text" label="菜品3名称" -->
+                <h3>桂花糯米藕</h3>
+                <!-- /@wt:edit -->
+                <!-- @wt:edit name="dish3-price" type="text" label="菜品3价格" -->
+                <span class="price">¥ 28</span>
+                <!-- /@wt:edit -->
+              </div>
+              <!-- @wt:edit name="dish3-desc" type="text" label="菜品3描述" -->
+              <p>秋藕灌入糯米，淋上糖桂花，软糯清甜，一道温柔的收尾甜品。</p>
+              <!-- /@wt:edit -->
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 门店信息 -->
+    <section class="section info-section">
+      <div class="container info-grid">
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <!-- @wt:edit name="info-address" type="text" label="门店地址" -->
+          <p>杭州市西湖区青芝坞 88 号</p>
+          <!-- /@wt:edit -->
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🕙</div>
+          <!-- @wt:edit name="info-hours" type="text" label="营业时间" -->
+          <p>每日 11:00 - 14:00 / 17:00 - 21:30</p>
+          <!-- /@wt:edit -->
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <!-- @wt:edit name="info-phone" type="text" label="订座电话" -->
+          <p>0571-8888-6666</p>
+          <!-- /@wt:edit -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <!-- @wt:edit name="footer-text" type="text" label="页脚文字" -->
+      <p>© 2026 山间小馆 · 好好吃饭，是件正经事</p>
+      <!-- /@wt:edit -->
+    </footer>
+  </body>
+</html>

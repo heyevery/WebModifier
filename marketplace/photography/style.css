@@ -1,0 +1,226 @@
+/* 摄影作品集样式 */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bg: #0e0f13;
+  --bg-soft: #16181f;
+  --text: #f3f4f6;
+  --muted: #9aa1ad;
+  --accent: #e8c07d;
+  --line: rgba(255, 255, 255, 0.1);
+}
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 首屏 */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 40px;
+  background:
+    linear-gradient(180deg, rgba(14, 15, 19, 0.55) 0%, rgba(14, 15, 19, 0.35) 45%, rgba(14, 15, 19, 0.95) 100%),
+    url('https://picsum.photos/seed/photo-hero/1600/1000') center/cover;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 28px;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-content h1 {
+  font-size: clamp(42px, 7vw, 84px);
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 0 0 20px;
+  letter-spacing: 2px;
+}
+.hero-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+.scroll-hint {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+  padding-bottom: 8px;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* 通用区块 */
+.section {
+  padding: 96px 0;
+}
+.kicker {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-size: 36px;
+  margin: 0 0 40px;
+  font-weight: 800;
+}
+
+/* 作品瀑布网格 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 18px;
+}
+.item {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.item:hover img {
+  transform: scale(1.06);
+}
+.item-tall {
+  grid-row: span 2;
+}
+.item-wide {
+  grid-column: span 2;
+}
+
+/* 关于 */
+.about {
+  background: var(--bg-soft);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+.about-text h2 {
+  margin-bottom: 20px;
+}
+.about-text p {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 0;
+}
+
+/* 联系 */
+.contact {
+  text-align: center;
+  padding: 110px 24px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(232, 192, 125, 0.14), transparent 60%),
+    var(--bg);
+}
+.contact h2 {
+  font-size: 36px;
+  margin: 0 0 32px;
+  font-weight: 800;
+}
+.contact-btn {
+  display: inline-block;
+  padding: 15px 44px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+.contact-btn:hover {
+  background: var(--accent);
+  color: #1a140a;
+  transform: translateY(-2px);
+}
+
+/* 页脚 */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding: 24px;
+  }
+  .nav-links a {
+    margin-left: 16px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+  .item-wide {
+    grid-column: span 2;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

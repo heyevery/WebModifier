@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>联系我们</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <!-- @wt:edit name="nav-brand" type="text" label="品牌名称" -->
+    <div class="brand">星云科技</div>
+    <!-- /@wt:edit -->
+    <nav class="nav-links">
+      <a href="#">首页</a>
+      <a href="#">产品</a>
+      <a href="#">关于</a>
+      <a href="#" class="active">联系</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <!-- @wt:edit name="page-title" type="text" label="页面主标题" -->
+  <h1>与我们取得联系</h1>
+  <!-- /@wt:edit -->
+  <!-- @wt:edit name="page-subtitle" type="text" label="页面副标题" -->
+  <p>无论是产品咨询、商务合作还是技术支持，我们都很乐意为你解答。填写下方表单或通过以下方式联系我们。</p>
+  <!-- /@wt:edit -->
+</section>
+
+<main class="layout">
+  <section class="info-card">
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div>
+        <div class="info-label">公司地址</div>
+        <!-- @wt:edit name="info-address" type="text" label="公司地址" -->
+        <div class="info-value">上海市浦东新区张江高科技园区博云路 2 号 创新大厦 18 层</div>
+        <!-- /@wt:edit -->
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div>
+        <div class="info-label">联系电话</div>
+        <!-- @wt:edit name="info-phone" type="text" label="联系电话" -->
+        <div class="info-value">400-888-6666（工作日 9:00 - 18:00）</div>
+        <!-- /@wt:edit -->
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">✉️</div>
+      <div>
+        <div class="info-label">电子邮箱</div>
+        <!-- @wt:edit name="info-email" type="text" label="电子邮箱" -->
+        <div class="info-value">hello@example.com</div>
+        <!-- /@wt:edit -->
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🕘</div>
+      <div>
+        <div class="info-label">营业时间</div>
+        <!-- @wt:edit name="info-hours" type="text" label="营业时间" -->
+        <div class="info-value">周一至周五 9:00 - 18:00，周末及节假日休息</div>
+        <!-- /@wt:edit -->
+      </div>
+    </div>
+    <div class="map-placeholder">地图位置示意 · 可在样式面板中替换背景</div>
+  </section>
+
+  <section class="form-card">
+    <!-- @wt:edit name="form-title" type="text" label="表单标题" -->
+    <h2>给我们留言</h2>
+    <!-- /@wt:edit -->
+    <!-- @wt:edit name="form-note" type="text" label="表单说明" -->
+    <p class="form-note">留下你的信息和需求，我们会在一个工作日内回复。</p>
+    <!-- /@wt:edit -->
+    <form class="form" onsubmit="return false;">
+      <div class="form-row">
+        <label>姓名<input type="text" placeholder="请输入您的姓名" /></label>
+        <label>电话<input type="tel" placeholder="请输入手机号码" /></label>
+      </div>
+      <label>邮箱<input type="email" placeholder="name@company.com" /></label>
+      <label>咨询内容
+        <textarea rows="5" placeholder="请简单描述您的需求或问题…"></textarea>
+      </label>
+      <!-- @wt:edit name="submit-link" type="link" label="提交按钮链接" -->
+      <a href="mailto:hello@example.com" class="submit-btn">提交留言</a>
+      <!-- /@wt:edit -->
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <!-- @wt:edit name="footer-copy" type="text" label="页脚版权" -->
+  <div>© 2026 星云科技有限公司 · 保留所有权利</div>
+  <!-- /@wt:edit -->
+</footer>
+
+</body>
+</html>

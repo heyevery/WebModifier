@@ -1,0 +1,30 @@
+{
+  "name": "公司介绍",
+  "version": "1.0.0",
+  "title": "公司介绍",
+  "description": "品牌故事、核心数据、团队成员与联系方式的企业官网模板。",
+  "category": "企业",
+  "emoji": "🏢",
+  "tags": ["企业官网", "团队"],
+  "editable": {
+    "brand": { "type": "text", "label": "品牌名", "default": "云启科技" },
+    "about-title": { "type": "text", "label": "关于我们标题", "default": "关于我们" },
+    "about-desc": { "type": "text", "label": "关于我们描述", "default": "云启科技成立于 2018 年，致力于为企业提供数字化转型解决方案。" },
+    "stat1-num": { "type": "text", "label": "数据1数值", "default": "500+" },
+    "stat1-label": { "type": "text", "label": "数据1标签", "default": "企业客户" },
+    "stat2-num": { "type": "text", "label": "数据2数值", "default": "99.9%" },
+    "stat2-label": { "type": "text", "label": "数据2标签", "default": "服务可用性" },
+    "stat3-num": { "type": "text", "label": "数据3数值", "default": "50+" },
+    "stat3-label": { "type": "text", "label": "数据3标签", "default": "技术专家" },
+    "team-title": { "type": "text", "label": "团队标题", "default": "核心团队" },
+    "member1-name": { "type": "text", "label": "成员1姓名", "default": "张明" },
+    "member1-role": { "type": "text", "label": "成员1职位", "default": "创始人 & CEO" },
+    "member2-name": { "type": "text", "label": "成员2姓名", "default": "李雪" },
+    "member2-role": { "type": "text", "label": "成员2职位", "default": "CTO" },
+    "member3-name": { "type": "text", "label": "成员3姓名", "default": "王浩" },
+    "member3-role": { "type": "text", "label": "成员3职位", "default": "设计总监" },
+    "contact-title": { "type": "text", "label": "联系标题", "default": "联系我们" },
+    "contact-desc": { "type": "text", "label": "联系描述", "default": "有项目合作意向？我们期待与您沟通。" },
+    "contact-btn": { "type": "link", "label": "联系按钮", "default": "联系销售" }
+  }
+}

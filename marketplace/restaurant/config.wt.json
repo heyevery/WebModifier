@@ -1,0 +1,31 @@
+{
+  "name": "山间小馆",
+  "version": "1.0.0",
+  "title": "餐厅美食页",
+  "description": "暖色调餐饮官网：全屏首屏、招牌菜单卡片与门店营业信息，可直接换成你的菜品。",
+  "category": "生活",
+  "emoji": "🍜",
+  "tags": ["餐饮", "门店", "菜单"],
+  "editable": {
+    "hero-title": { "type": "text", "label": "主标题" },
+    "hero-subtitle": { "type": "text", "label": "副标题" },
+    "reserve-link": { "type": "link", "label": "预订按钮" },
+    "about-image": { "type": "image", "label": "店内环境图" },
+    "about-title": { "type": "text", "label": "关于标题" },
+    "about-text": { "type": "text", "label": "关于描述" },
+    "menu-title": { "type": "text", "label": "菜单标题" },
+    "dish1-name": { "type": "text", "label": "菜品1名称" },
+    "dish1-price": { "type": "text", "label": "菜品1价格" },
+    "dish1-desc": { "type": "text", "label": "菜品1描述" },
+    "dish2-name": { "type": "text", "label": "菜品2名称" },
+    "dish2-price": { "type": "text", "label": "菜品2价格" },
+    "dish2-desc": { "type": "text", "label": "菜品2描述" },
+    "dish3-name": { "type": "text", "label": "菜品3名称" },
+    "dish3-price": { "type": "text", "label": "菜品3价格" },
+    "dish3-desc": { "type": "text", "label": "菜品3描述" },
+    "info-address": { "type": "text", "label": "门店地址" },
+    "info-hours": { "type": "text", "label": "营业时间" },
+    "info-phone": { "type": "text", "label": "订座电话" },
+    "footer-text": { "type": "text", "label": "页脚文字" }
+  }
+}

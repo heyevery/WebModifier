@@ -1,0 +1,27 @@
+{
+  "name": "摄影作品集",
+  "version": "1.0.0",
+  "title": "摄影作品集",
+  "description": "暗色质感摄影网站：全屏首屏、瀑布作品网格与合作邀约入口，适合视觉创作者。",
+  "category": "个人",
+  "emoji": "📷",
+  "tags": ["摄影", "作品集", "暗色"],
+  "editable": {
+    "site-name": { "type": "text", "label": "站点名" },
+    "hero-title": { "type": "text", "label": "主标题" },
+    "hero-subtitle": { "type": "text", "label": "副标题" },
+    "works-title": { "type": "text", "label": "作品区标题" },
+    "photo-1": { "type": "image", "label": "作品图1" },
+    "photo-2": { "type": "image", "label": "作品图2" },
+    "photo-3": { "type": "image", "label": "作品图3" },
+    "photo-4": { "type": "image", "label": "作品图4" },
+    "photo-5": { "type": "image", "label": "作品图5" },
+    "photo-6": { "type": "image", "label": "作品图6" },
+    "about-photo": { "type": "image", "label": "摄影师照片" },
+    "about-title": { "type": "text", "label": "关于标题" },
+    "about-text": { "type": "text", "label": "关于描述" },
+    "contact-title": { "type": "text", "label": "联系标题" },
+    "contact-link": { "type": "link", "label": "联系按钮" },
+    "footer-text": { "type": "text", "label": "页脚文字" }
+  }
+}

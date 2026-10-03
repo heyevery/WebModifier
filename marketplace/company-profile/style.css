@@ -1,0 +1,144 @@
+/* 公司介绍样式 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: #4f2cce;
+  color: #b72a2a;
+  line-height: 1.7;
+}
+
+header {
+  background: #2e2eb8;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #e53434;
+  font-size: 17px;
+}
+
+.stats {
+  background: #993838;
+  padding: 48px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat .num {
+  font-size: 40px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.stat .label {
+  color: #888;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.team {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.team h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.member {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.member .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a78bfa, #6366f1);
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+}
+
+.member h4 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.member .role {
+  color: #888;
+  font-size: 14px;
+}
+
+.contact {
+  background: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.contact p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  display: inline-block;
+  background: #4f46e5;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Hello 模板",
+  "version": "1.0.0",
+  "title": "欢迎页",
+  "description": "最简示例模板，适合第一次上手，快速体验文字替换与可视化编辑。",
+  "category": "入门",
+  "emoji": "👋",
+  "tags": ["入门", "简洁"],
+  "editable": {
+    "hero-title": {
+      "type": "text",
+      "label": "主标题",
+      "default": "欢迎来到产品主页",
+      "validation": { "maxLength": 50, "required": true }
+    },
+    "hero-subtitle": {
+      "type": "text",
+      "label": "副标题",
+      "default": "这是一个示例模板，演示 Web Modifier 的可视化编辑能力。",
+      "validation": { "maxLength": 120 }
+    }
+  }
+}

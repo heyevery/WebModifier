@@ -1,0 +1,30 @@
+{
+  "name": "个人简历",
+  "version": "1.0.0",
+  "title": "个人简历页",
+  "description": "左右双栏求职简历，含技能、经历与教育背景，可直接打印或导出 PDF。",
+  "category": "个人",
+  "emoji": "📄",
+  "tags": ["简历", "求职", "打印友好"],
+  "editable": {
+    "avatar": { "type": "image", "label": "头像照片" },
+    "resume-name": { "type": "text", "label": "姓名" },
+    "resume-headline": { "type": "text", "label": "职位头衔" },
+    "contact-email": { "type": "text", "label": "邮箱" },
+    "contact-phone": { "type": "text", "label": "电话" },
+    "contact-location": { "type": "text", "label": "所在城市" },
+    "profile-summary": { "type": "text", "label": "个人简介" },
+    "exp1-company": { "type": "text", "label": "工作1公司" },
+    "exp1-period": { "type": "text", "label": "工作1时间" },
+    "exp1-role": { "type": "text", "label": "工作1职位" },
+    "exp1-desc": { "type": "text", "label": "工作1描述" },
+    "exp2-company": { "type": "text", "label": "工作2公司" },
+    "exp2-period": { "type": "text", "label": "工作2时间" },
+    "exp2-role": { "type": "text", "label": "工作2职位" },
+    "exp2-desc": { "type": "text", "label": "工作2描述" },
+    "edu-school": { "type": "text", "label": "学校" },
+    "edu-period": { "type": "text", "label": "就读时间" },
+    "edu-major": { "type": "text", "label": "专业" },
+    "portfolio-link": { "type": "link", "label": "作品/主页链接" }
+  }
+}

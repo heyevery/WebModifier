@@ -1,0 +1,23 @@
+{
+  "name": "产品落地页",
+  "version": "1.0.0",
+  "title": "产品落地页",
+  "description": "含主视觉、特性介绍与行动号召的产品营销单页，适合新品发布。",
+  "category": "产品",
+  "emoji": "🚀",
+  "tags": ["落地页", "营销", "SaaS"],
+  "editable": {
+    "hero-title": { "type": "text", "label": "主标题", "default": "让您的业务更高效", "validation": { "required": true } },
+    "hero-subtitle": { "type": "text", "label": "副标题", "default": "一站式解决方案，助力团队协作与业务增长，简单易用，开箱即用。" },
+    "hero-cta": { "type": "link", "label": "主按钮", "default": "立即开始" },
+    "feat1-title": { "type": "text", "label": "特性1标题", "default": "极速响应" },
+    "feat1-desc": { "type": "text", "label": "特性1描述", "default": "毫秒级响应速度，流畅的用户体验，让每一次操作都得心应手。" },
+    "feat2-title": { "type": "text", "label": "特性2标题", "default": "安全可靠" },
+    "feat2-desc": { "type": "text", "label": "特性2描述", "default": "企业级安全保障，数据加密存储，多重备份，守护您的核心资产。" },
+    "feat3-title": { "type": "text", "label": "特性3标题", "default": "智能分析" },
+    "feat3-desc": { "type": "text", "label": "特性3描述", "default": "内置数据分析引擎，实时洞察业务趋势，辅助科学决策。" },
+    "cta-title": { "type": "text", "label": "行动号召标题", "default": "准备好开始了吗？" },
+    "cta-subtitle": { "type": "text", "label": "行动号召副标题", "default": "免费试用，无需信用卡，几分钟即可上手。" },
+    "cta-btn": { "type": "link", "label": "行动号召按钮", "default": "免费试用" }
+  }
+}

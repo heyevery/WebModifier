@@ -1,0 +1,356 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   设计令牌（对齐 VSCode Dark+ / Dark Modern 色板）
+   颜色统一用 RGB 通道三元组，配合 rgb(var(--x) / alpha) 使用；
+   组件通过 tailwind wt-* 语义色消费，禁止再写死十六进制值。
+   ============================================================ */
+:root {
+  color-scheme: dark;
+
+  /* 表面层：编辑器底 → 卡片/浮层 → 输入框 */
+  --wt-bg-rgb: 30 30 30; /* #1e1e1e editor */
+  --wt-surface-rgb: 37 37 38; /* #252526 侧栏/浮层 */
+  --wt-surface-2-rgb: 45 45 48; /* #2d2d30 */
+  --wt-input-rgb: 60 60 60; /* #3c3c3c 输入框 */
+
+  /* VSCode 骨架区域（P1-4 布局层消费） */
+  --wt-titlebar-rgb: 60 60 60; /* #3c3c3c 标题栏 */
+  --wt-activitybar-rgb: 51 51 51; /* #333333 */
+  --wt-sidebar-rgb: 37 37 38; /* #252526 */
+  --wt-tabbar-rgb: 45 45 45; /* #2d2d2d */
+  --wt-tab-inactive-rgb: 45 45 45;
+  --wt-tab-active-rgb: 30 30 30;
+  --wt-statusbar-rgb: 0 122 204; /* #007acc */
+
+  /* 边框 / 分隔线 */
+  --wt-border-rgb: 43 43 43; /* #2b2b2b */
+  --wt-border-strong-rgb: 69 69 69; /* #454545 浮层描边 */
+
+  /* 文本 */
+  --wt-text-rgb: 204 204 204; /* #cccccc */
+  --wt-text-bright-rgb: 255 255 255;
+  --wt-muted-rgb: 133 133 133; /* #858585 */
+
+  /* 品牌/强调（按钮、焦点、选中态） */
+  --wt-primary-rgb: 14 99 156; /* #0e639c button */
+  --wt-primary-hover-rgb: 17 119 187; /* #1177bb */
+  --wt-accent-rgb: 0 122 212; /* #0078d4 */
+  --wt-focus-rgb: 0 127 212; /* #007fd4 focusBorder */
+  --wt-selection-rgb: 9 71 113; /* #094771 */
+  --wt-list-hover-rgb: 42 45 46; /* #2a2d2e */
+
+  /* 语义色 */
+  --wt-success-rgb: 115 201 145; /* #73c991 */
+  --wt-warning-rgb: 204 167 0; /* #cca700 */
+  --wt-danger-rgb: 241 76 76; /* #f14c4c */
+
+  /* 字体：与 VSCode 一致使用系统 UI 栈，离线可用 */
+  --wt-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  --wt-font-mono: 'Cascadia Code', 'JetBrains Mono', Consolas, 'SF Mono', Menlo,
+    'Courier New', monospace;
+
+  /* 圆角：VSCode 风格偏锐利 */
+  --wt-radius-sm: 2px;
+  --wt-radius: 4px;
+  --wt-radius-lg: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--wt-font-sans);
+  font-size: 13px;
+  background-color: rgb(var(--wt-bg-rgb));
+  color: rgb(var(--wt-text-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* 自定义滚动条（VSCode 风格半透明灰） */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(121, 121, 121, 0.4);
+  border-radius: 0;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.7);
+  background-clip: content-box;
+}
+
+/* 选区高亮辉光 */
+@keyframes wt-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px rgba(var(--wt-focus-rgb), 0.7), 0 0 16px rgba(var(--wt-focus-rgb), 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(var(--wt-focus-rgb), 0.9), 0 0 22px rgba(var(--wt-focus-rgb), 0.5);
+  }
+}
+
+.wt-overlay-box {
+  position: absolute;
+  border: 1.5px solid rgba(var(--wt-focus-rgb), 0.55);
+  background: rgba(var(--wt-focus-rgb), 0.05);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, box-shadow 200ms ease;
+  pointer-events: auto;
+}
+
+.wt-overlay-box:hover {
+  background: rgba(var(--wt-focus-rgb), 0.14);
+  border-color: rgba(var(--wt-focus-rgb), 0.95);
+}
+
+.wt-overlay-box--selected {
+  border: 2px solid rgba(var(--wt-focus-rgb), 0.95);
+  background: rgba(var(--wt-focus-rgb), 0.08);
+  animation: wt-glow 1.8s ease-in-out infinite;
+}
+
+.wt-overlay-label {
+  position: absolute;
+  top: -22px;
+  left: -1.5px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 5px 8px;
+  background: rgb(var(--wt-primary-rgb));
+  color: white;
+  border-radius: 4px 4px 4px 0;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  font-family: var(--wt-font-sans);
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+/* 标签贴在框内顶部（框距视口顶部太近时由组件加 class） */
+.wt-overlay-label--inside {
+  top: 2px;
+  left: 2px;
+  border-radius: 3px;
+}
+
+.wt-overlay-box:hover .wt-overlay-label,
+.wt-overlay-box--selected .wt-overlay-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wt-overlay-box--selected .wt-overlay-label {
+  background: rgb(var(--wt-accent-rgb));
+  color: #ffffff;
+}
+
+/* 自定义滑块：原生 input[range] 高度过小会导致拇指热区不足、拖不动，
+   这里统一扩大热区并美化轨道/拇指，--wt-pct 控制已填充进度（0-100） */
+.wt-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 18px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+.wt-range:focus {
+  outline: none;
+}
+.wt-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--wt-primary-rgb)) 0%,
+    rgb(var(--wt-primary-rgb)) var(--wt-pct, 50%),
+    rgb(var(--wt-surface-2-rgb)) var(--wt-pct, 50%),
+    rgb(var(--wt-surface-2-rgb)) 100%
+  );
+}
+.wt-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  margin-top: -4.5px;
+  border-radius: 50%;
+  background: rgb(var(--wt-primary-rgb));
+  border: 2px solid rgb(var(--wt-text-rgb));
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  transition: transform 120ms ease, background 120ms ease;
+}
+.wt-range:hover::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+.wt-range:active::-webkit-slider-thumb {
+  transform: scale(1.25);
+  background: rgb(var(--wt-accent-rgb));
+}
+.wt-range::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgb(var(--wt-surface-2-rgb));
+}
+.wt-range::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: rgb(var(--wt-primary-rgb));
+}
+.wt-range::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgb(var(--wt-primary-rgb));
+  border: 2px solid rgb(var(--wt-text-rgb));
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+/* 三栏布局拖拽分隔条 */
+.wt-resizer {
+  position: relative;
+  width: 5px;
+  flex-shrink: 0;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 20;
+}
+.wt-resizer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  width: 1px;
+  background: transparent;
+  transition: background 120ms ease;
+}
+.wt-resizer:hover::after,
+.wt-resizer.wt-resizer--active::after {
+  background: rgb(var(--wt-focus-rgb));
+}
+/* 拖拽中：全局列宽光标 + 禁选中文本 + iframe 不吞鼠标事件 */
+body.wt-resizing {
+  cursor: col-resize !important;
+  user-select: none !important;
+}
+body.wt-resizing iframe {
+  pointer-events: none !important;
+}
+
+/* iframe 容器：固定填充父元素；响应式模式下用深色 gutter 衬托定宽舞台 */
+.wt-iframe-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgb(var(--wt-bg-rgb));
+}
+
+/* 响应式宽度切换工具条：浮在预览顶部中央 */
+.wt-viewport-toolbar {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: rgba(var(--wt-surface-rgb), 0.92);
+  border: 1px solid rgb(var(--wt-border-strong-rgb));
+  border-radius: var(--wt-radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+.wt-viewport-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--wt-radius-sm);
+  font-size: 11px;
+  line-height: 1;
+  color: rgb(var(--wt-muted-rgb));
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.wt-viewport-btn:hover {
+  color: rgb(var(--wt-text-rgb));
+  background: rgba(255, 255, 255, 0.08);
+}
+.wt-viewport-btn--active {
+  color: #fff;
+  background: rgb(var(--wt-primary-rgb));
+}
+.wt-viewport-btn--active:hover {
+  color: #fff;
+  background: rgb(var(--wt-primary-hover-rgb));
+}
+.wt-viewport-width {
+  padding: 0 8px 0 4px;
+  font-size: 10px;
+  font-family: var(--wt-font-mono);
+  color: rgb(var(--wt-muted-rgb));
+}
+
+/* 舞台：iframe 与 overlay 共同的定宽容器，保证高亮框坐标始终对齐 */
+.wt-viewport-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+}
+.wt-viewport--tablet .wt-viewport-stage,
+.wt-viewport--phone .wt-viewport-stage {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.wt-iframe-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: white;
+}
+
+.wt-overlay-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

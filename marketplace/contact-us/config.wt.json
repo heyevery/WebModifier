@@ -1,0 +1,22 @@
+{
+  "name": "联系我们",
+  "version": "1.0.0",
+  "title": "联系我们",
+  "description": "企业官网常用的联系页面：联系方式卡片、留言表单与门店信息，客户可以快速找到你。",
+  "category": "商业",
+  "emoji": "📮",
+  "tags": ["联系", "表单", "企业官网"],
+  "editable": {
+    "nav-brand": { "type": "text", "label": "品牌名称" },
+    "page-title": { "type": "text", "label": "页面主标题" },
+    "page-subtitle": { "type": "text", "label": "页面副标题" },
+    "info-address": { "type": "text", "label": "公司地址" },
+    "info-phone": { "type": "text", "label": "联系电话" },
+    "info-email": { "type": "text", "label": "电子邮箱" },
+    "info-hours": { "type": "text", "label": "营业时间" },
+    "form-title": { "type": "text", "label": "表单标题" },
+    "form-note": { "type": "text", "label": "表单说明" },
+    "submit-link": { "type": "link", "label": "提交按钮链接" },
+    "footer-copy": { "type": "text", "label": "页脚版权" }
+  }
+}

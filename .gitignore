@@ -1,0 +1,16 @@
+node_modules
+out
+dist
+.vite
+*.log
+.DS_Store
+exports/
+
+# 开发态用户数据目录（正式版对应 userData，不随安装包分发）
+templates/
+projects/
+previews/
+
+# 运行时产物
+*.tsbuildinfo
+.wt-original/

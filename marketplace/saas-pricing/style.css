@@ -1,0 +1,101 @@
+/* SaaS 定价页样式 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+.header {
+  text-align: center;
+  padding: 64px 24px 40px;
+}
+.header h1 { font-size: 38px; margin-bottom: 14px; }
+.header p { color: #666; font-size: 17px; }
+.toggle {
+  display: inline-flex;
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  margin-top: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.toggle span {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #888;
+}
+.toggle span.active {
+  background: #4f46e5;
+  color: white;
+}
+.pricing {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.plan {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+}
+.plan.featured {
+  border: 2px solid #4f46e5;
+  transform: scale(1.04);
+}
+.plan .badge {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: #4f46e5;
+  color: white;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.plan h3 { font-size: 20px; margin-bottom: 8px; }
+.plan .price { font-size: 40px; font-weight: 800; margin: 12px 0; }
+.plan .price .unit { font-size: 16px; font-weight: 400; color: #888; }
+.plan .desc { color: #888; font-size: 14px; margin-bottom: 20px; }
+.plan ul { list-style: none; margin-bottom: 24px; }
+.plan li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #444;
+}
+.plan li::before { content: "✓ "; color: #10b981; font-weight: bold; }
+.plan a.btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #f0f0f0;
+  color: #333;
+}
+.plan.featured a.btn {
+  background: #4f46e5;
+  color: white;
+}
+.faq {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+.faq h2 { font-size: 26px; text-align: center; margin-bottom: 28px; }
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+}
+.faq-item h4 { font-size: 16px; margin-bottom: 6px; }
+.faq-item p { color: #666; font-size: 14px; }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>登录</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page">
+  <!-- 左侧品牌区 -->
+  <aside class="brand-side">
+    <!-- @wt:edit name="brand" type="text" label="品牌名称" -->
+    <div class="brand">◆ 星云工作台</div>
+    <!-- /@wt:edit -->
+    <div class="brand-body">
+      <!-- @wt:edit name="welcome-title" type="text" label="欢迎标题" -->
+      <h1>欢迎回来，<br />继续你的高效工作</h1>
+      <!-- /@wt:edit -->
+      <!-- @wt:edit name="welcome-desc" type="text" label="欢迎描述" -->
+      <p>一个账号，连接团队协作、项目管理与数据分析，让每一次登录都离目标更近一步。</p>
+      <!-- /@wt:edit -->
+      <ul class="features">
+        <li>
+          <span class="dot">✓</span>
+          <!-- @wt:edit name="feature-1" type="text" label="卖点一" -->
+          <span>银行级加密，守护账户与数据安全</span>
+          <!-- /@wt:edit -->
+        </li>
+        <li>
+          <span class="dot">✓</span>
+          <!-- @wt:edit name="feature-2" type="text" label="卖点二" -->
+          <span>云端同步，随时随地接续工作进度</span>
+          <!-- /@wt:edit -->
+        </li>
+        <li>
+          <span class="dot">✓</span>
+          <!-- @wt:edit name="feature-3" type="text" label="卖点三" -->
+          <span>免费开始，按需升级，随时取消</span>
+          <!-- /@wt:edit -->
+        </li>
+      </ul>
+    </div>
+    <!-- @wt:edit name="footer-copy" type="text" label="页脚版权" -->
+    <div class="brand-footer">© 2026 星云科技 · 服务条款 · 隐私政策</div>
+    <!-- /@wt:edit -->
+  </aside>
+
+  <!-- 右侧登录卡片 -->
+  <main class="form-side">
+    <div class="login-card">
+      <!-- @wt:edit name="card-title" type="text" label="卡片标题" -->
+      <h2>账号登录</h2>
+      <!-- /@wt:edit -->
+      <!-- @wt:edit name="card-desc" type="text" label="卡片描述" -->
+      <p class="card-desc">输入账号密码即可进入工作台</p>
+      <!-- /@wt:edit -->
+
+      <form onsubmit="return false;">
+        <label class="field">
+          <span>邮箱 / 手机号</span>
+          <input type="text" placeholder="name@company.com" />
+        </label>
+        <label class="field">
+          <span>密码</span>
+          <input type="password" placeholder="请输入密码" />
+        </label>
+        <div class="form-row">
+          <label class="remember"><input type="checkbox" checked /> 记住我</label>
+          <a href="#" class="forgot">忘记密码？</a>
+        </div>
+        <!-- @wt:edit name="login-link" type="link" label="登录按钮链接" -->
+        <a href="#" class="login-btn">登 录</a>
+        <!-- /@wt:edit -->
+      </form>
+
+      <div class="divider"><span>或</span></div>
+      <button type="button" class="third-party">使用微信扫码登录</button>
+
+      <div class="signup">
+        还没有账号？
+        <!-- @wt:edit name="signup-link" type="link" label="注册链接" -->
+        <a href="#">立即注册</a>
+        <!-- /@wt:edit -->
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

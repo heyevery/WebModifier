@@ -1,0 +1,117 @@
+/* 登录页 — 深紫渐变品牌侧 + 简洁白卡片 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  color: #1e1b2e;
+  background: #f6f5fb;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+
+/* 左侧品牌区 */
+.brand-side {
+  position: relative;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(167,139,250,.45), transparent 60%),
+    radial-gradient(700px 500px at -10% 110%, rgba(56,189,248,.35), transparent 55%),
+    linear-gradient(150deg, #4c1d95 0%, #6d28d9 55%, #7c3aed 100%);
+  overflow: hidden;
+}
+.brand { font-size: 20px; font-weight: 700; letter-spacing: .5px; }
+.brand-body { margin: auto 0; }
+.brand-body h1 { font-size: 36px; line-height: 1.35; margin-bottom: 20px; font-weight: 700; }
+.brand-body p { font-size: 15px; color: rgba(255,255,255,.82); max-width: 420px; margin-bottom: 36px; }
+
+.features { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.features li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,.9); }
+.dot {
+  width: 24px; height: 24px; flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+}
+.brand-footer { font-size: 12px; color: rgba(255,255,255,.55); }
+
+/* 右侧表单区 */
+.form-side { display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(76,29,149,.10);
+  padding: 40px 36px;
+}
+.login-card h2 { font-size: 24px; margin-bottom: 6px; }
+.card-desc { font-size: 13px; color: #8b87a3; margin-bottom: 28px; }
+
+.field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; font-size: 13px; color: #555070; font-weight: 500; }
+.field input {
+  font: inherit;
+  padding: 11px 14px;
+  border: 1px solid #e3e0f0;
+  border-radius: 10px;
+  background: #faf9fe;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.field input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124,58,237,.12);
+  background: #fff;
+}
+.form-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; font-size: 13px; }
+.remember { display: flex; align-items: center; gap: 6px; color: #6b6787; cursor: pointer; }
+.forgot { color: #7c3aed; text-decoration: none; }
+.forgot:hover { text-decoration: underline; }
+
+.login-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 4px;
+  transition: transform .15s, box-shadow .2s;
+}
+.login-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(124,58,237,.32); }
+
+.divider { display: flex; align-items: center; gap: 12px; margin: 24px 0 16px; color: #b6b2c9; font-size: 12px; }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: #ece9f7; }
+.third-party {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e3e0f0;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  color: #555070;
+  cursor: pointer;
+  transition: background .2s;
+}
+.third-party:hover { background: #faf9fe; }
+.signup { margin-top: 22px; text-align: center; font-size: 13px; color: #8b87a3; }
+.signup a { color: #7c3aed; text-decoration: none; font-weight: 600; margin-left: 4px; }
+.signup a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: 1fr; }
+  .brand-side { padding: 36px 28px; min-height: auto; }
+  .brand-body { margin: 28px 0; }
+  .brand-body h1 { font-size: 28px; }
+}

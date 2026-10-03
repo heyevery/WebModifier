@@ -1,0 +1,113 @@
+/* 常见问题 — 清爽青绿帮助中心风 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  color: #1f2933;
+  background: #f5f8f7;
+  line-height: 1.7;
+}
+
+/* 导航 */
+.nav {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { font-size: 17px; font-weight: 700; color: #0f766e; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  text-decoration: none;
+  color: #6b7a78;
+  font-size: 14px;
+  transition: color .2s;
+}
+.nav-links a:hover { color: #0f766e; }
+.nav-links a.active { color: #0f766e; font-weight: 600; }
+
+/* 头部 */
+.hero { text-align: center; padding: 40px 24px 36px; }
+.hero h1 {
+  font-size: 34px;
+  color: #134e4a;
+  margin-bottom: 12px;
+}
+.hero p { color: #5f7470; font-size: 15px; }
+
+/* 问答列表 */
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
+.faq-list { display: flex; flex-direction: column; gap: 14px; }
+.faq-item {
+  background: #fff;
+  border: 1px solid #e1ebe8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow .2s, border-color .2s;
+}
+.faq-item[open] {
+  border-color: #5eead4;
+  box-shadow: 0 8px 24px rgba(15,118,110,.08);
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2933;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .arrow {
+  flex-shrink: 0;
+  color: #0f766e;
+  font-size: 18px;
+  transition: transform .25s;
+}
+.faq-item[open] summary .arrow { transform: rotate(180deg); }
+.answer {
+  font-size: 14px;
+  color: #546662;
+  border-top: 1px dashed #e1ebe8;
+  margin: 0 22px;
+  padding: 14px 0 20px;
+}
+
+/* 支持区 */
+.support {
+  margin-top: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  border-radius: 16px;
+  padding: 44px 24px;
+  color: #fff;
+}
+.support h2 { font-size: 22px; margin-bottom: 8px; }
+.support p { font-size: 14px; color: rgba(255,255,255,.85); margin-bottom: 24px; }
+.support-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #fff;
+  color: #0f766e;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 11px 32px;
+  border-radius: 999px;
+  transition: transform .15s, box-shadow .2s;
+}
+.support-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.15); }
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 26px 16px;
+  font-size: 12px;
+  color: #93a5a1;
+}
