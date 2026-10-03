@@ -98,8 +98,8 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "your-github-name",
-        "repo": "web-modifier"
+        "owner": "heyevery",
+        "repo": "WebModifier"
       }
     ]
   },
